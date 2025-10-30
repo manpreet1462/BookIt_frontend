@@ -1,11 +1,8 @@
-
-
 'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Navbar from '../components/Navbar';
-import Image from 'next/image';
 
 export default function Confirmation() {
   const router = useRouter();
@@ -56,15 +53,21 @@ export default function Confirmation() {
 
       <main className="flex items-center justify-center min-h-[50vh] px-6">
         <div className="text-center">
+          {/* Custom Green Circle with White Tick */}
           <div className="flex justify-center mb-6">
-            <div className="rounded-full flex items-center justify-center">
-              <Image
-                src="/success.svg"
-                alt="Booking Confirmed"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
+            <div className="w-20 h-20 bg-[#24AC39] rounded-full flex items-center justify-center">
+              <svg 
+                width="50" 
+                height="50" 
+                viewBox="0 0 640 640" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  fill="#ffffff" 
+                  d="M530.8 134.1C545.1 144.5 548.3 164.5 537.9 178.8L281.9 530.8C276.4 538.4 267.9 543.1 258.5 543.9C249.1 544.7 240 541.2 233.4 534.6L105.4 406.6C92.9 394.1 92.9 373.8 105.4 361.3C117.9 348.8 138.2 348.8 150.7 361.3L252.2 462.8L486.2 141.1C496.6 126.8 516.6 123.6 530.9 134z"
+                />
+              </svg>
             </div>
           </div>
 
@@ -76,7 +79,7 @@ export default function Confirmation() {
             Ref ID: <span className="font-semibold">{referenceId}</span>
           </p>
 
-                    <button
+          <button
             onClick={handleBackToHome}
             className="px-6 py-3 bg-[#E3E3E3] text-[#656565] font-medium rounded-md hover:bg-gray-200 hover:text-gray-600 transition-colors"
           >

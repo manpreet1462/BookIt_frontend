@@ -203,8 +203,7 @@ const handlePayAndConfirm = async () => {
                 </div>
               </div>
 
-              {/* Promo Code */}
-              {/* Promo Code */}
+             
 <div className="mb-4">
   <label className="block text-[#5B5B5B] text-sm mb-2">Promo Code</label>
   <div className="flex flex-col sm:flex-row gap-3">
