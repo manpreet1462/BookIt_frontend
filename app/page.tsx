@@ -65,7 +65,7 @@ export default function Home() {
     return (
       <div className="min-h-screen bg-gray-50">
         <Navbar onSearch={handleSearch} searchQuery={searchQuery} />
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="text-center py-12">
             <p className="text-red-500 text-lg">{error}</p>
             <button 
@@ -84,9 +84,9 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Navbar onSearch={handleSearch} searchQuery={searchQuery} />
 
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {Array.from({ length: 8 }).map((_, index) => (
               <ExperienceSkeleton key={index} />
             ))}
@@ -96,7 +96,7 @@ export default function Home() {
             <p className="text-gray-500 text-lg">No experiences found for "{searchQuery}"</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {filteredExperiences.map((experience) => (
               <ExperienceCard key={experience._id} experience={experience} />
             ))}

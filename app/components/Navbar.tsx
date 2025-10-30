@@ -19,9 +19,9 @@ export default function Navbar({ onSearch, searchQuery }: NavbarProps) {
 
   return (
     <nav className="bg-white shadow-lg border-b border-gray-50">
-      <div className="max-w-7xl mx-auto px-6 py-1">
-        <div className="flex items-center justify-between gap-[45%]">
-          <Link href="/" className="flex items-center shrink-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
+          <Link href="/" className="flex items-center justify-center sm:justify-start shrink-0">
             <Image
               src="/logo.svg"
               alt="Highway Delite Logo"
@@ -31,18 +31,18 @@ export default function Navbar({ onSearch, searchQuery }: NavbarProps) {
             />
           </Link>
 
-          <form onSubmit={handleSubmit} className="flex-1 max-w-2xl ml-auto">
-            <div className="flex items-center gap-3">
+          <form onSubmit={handleSubmit} className="w-full sm:flex-1 sm:max-w-2xl sm:ml-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-3">
               <input
                 type="text"
                 placeholder="Search experiences"
                 value={searchQuery}
                 onChange={handleChange}
-                className="flex-1 px-4 py-3 bg-[#EDEDED] text-[#2D2D2D] placeholder-[#727272] rounded-md"
+                className="w-full sm:flex-1 px-4 py-3 bg-[#EDEDED] text-[#2D2D2D] placeholder-[#727272] rounded-md"
               />
               <button
                 type="submit"
-                className="px-8 py-3 bg-[#FFD643] text-[#161616] font-medium rounded-md hover:bg-yellow-500 transition-colors"
+                className="w-full sm:w-auto px-8 py-3 bg-[#FFD643] text-[#161616] font-medium rounded-md hover:bg-yellow-500 transition-colors"
               >
                 Search
               </button>
